@@ -1,24 +1,127 @@
-# README
+# My Admin
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 8 admin application built with ActiveAdmin and Devise.
 
-Things you may want to cover:
+## Tech Stack
 
-* Ruby version
+- Ruby `3.4.8`
+- Rails `~> 8.1.3`
+- ActiveAdmin + Devise
+- SQLite3
+- Importmap + Stimulus + Turbo
 
-* System dependencies
+## Project Structure
 
-* Configuration
+- `app/`: application code (`models/`, `controllers/`, `views/`, `jobs/`, `helpers/`)
+- `app/admin/`: ActiveAdmin resources and dashboards
+- `app/javascript/`: Stimulus/importmap JavaScript code
+- `app/assets/`: stylesheets and JavaScript assets
+- `config/`: routes, environments, initializers, deploy config
+- `db/`: migrations, schemas, seeds
+- `test/`: Minitest suite and fixtures
 
-* Database creation
+## Prerequisites
 
-* Database initialization
+- Ruby `3.4.8` (see `.ruby-version`)
+- Bundler
+- SQLite3
 
-* How to run the test suite
+## Local Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Install dependencies and prepare the app:
 
-* Deployment instructions
+```bash
+bin/setup
+```
 
-* ...
+2. Create/migrate the database (if needed):
+
+```bash
+bin/rails db:prepare
+```
+
+3. Seed a development admin user:
+
+```bash
+bin/rails db:seed
+```
+
+A default admin is created in development:
+
+- Email: `admin@example.com`
+- Password: `password`
+
+## Run the App
+
+Start development services:
+
+```bash
+bin/dev
+```
+
+Or run Rails server directly:
+
+```bash
+bin/rails server
+```
+
+## Routes
+
+- Admin login and pages are mounted by ActiveAdmin/Devise
+- Health check endpoint: `GET /up`
+
+## Testing
+
+Run the full test suite:
+
+```bash
+bin/rails test
+```
+
+Run one test file:
+
+```bash
+bin/rails test test/models/admin_user_test.rb
+```
+
+## Linting and Security Checks
+
+Run style checks:
+
+```bash
+bin/rubocop
+```
+
+Run security static analysis:
+
+```bash
+bin/brakeman
+```
+
+Check gem vulnerabilities:
+
+```bash
+bin/bundler-audit
+```
+
+Run the local CI pipeline config:
+
+```bash
+bin/ci
+```
+
+## Deployment
+
+This app includes Docker/Kamal configuration:
+
+- `Dockerfile`
+- `config/deploy.yml`
+
+Review deployment settings before first release.
+
+## Contributing
+
+- Follow RuboCop Rails Omakase style (`.rubocop.yml`)
+- Keep changes small and logically scoped
+- Add/update tests for behavior changes
+- For UI/admin changes, include screenshots in PRs
