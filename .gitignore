@@ -1,0 +1,47 @@
+# OS/editor-local noise (prefer global ignore when possible)
+.DS_Store
+*.swp
+*.swo
+
+# Bundler
+/.bundle
+
+# Environment files
+/.env*
+
+# Logs and temp files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Keep tmp pids directory structure
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Active Storage and temp storage
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Compiled/static assets
+/public/assets
+
+# SQLite databases (development/test, including Solid* DB files)
+/db/*.sqlite3
+/db/*.sqlite3-*
+
+# Rails credentials keys
+/config/*.key
+
+# Local coverage output
+/coverage
+.kamal/hooks/docker-setup.sample
+/.kamal
+.rubocop.yml
+.ruby-version
+/tmp
+/script
