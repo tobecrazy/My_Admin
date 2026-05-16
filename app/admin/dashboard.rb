@@ -30,7 +30,7 @@ ActiveAdmin.register_page "Dashboard" do
           summary = visitors.fetch("summary")
 
           div class: "dashboard-v3-header" do
-            a visitors.fetch("report_label"), href: "#", class: "dashboard-v3-report-link"
+            a visitors.fetch("report_label"), href: helpers.admin_reports_path, class: "dashboard-v3-report-link"
           end
 
           div class: "dashboard-v3-metric" do
@@ -80,7 +80,7 @@ ActiveAdmin.register_page "Dashboard" do
           summary = sales.fetch("summary")
 
           div class: "dashboard-v3-header" do
-            a sales.fetch("report_label"), href: "#", class: "dashboard-v3-report-link"
+            a sales.fetch("report_label"), href: helpers.admin_reports_path, class: "dashboard-v3-report-link"
           end
 
           div class: "dashboard-v3-metric" do

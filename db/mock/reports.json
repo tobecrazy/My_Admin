@@ -1,0 +1,39 @@
+{
+  "reports": [
+    {
+      "index": 1,
+      "item_name": "Order Processing",
+      "start_date": "2026-05-01",
+      "status": "Open",
+      "comments": "Initial review started"
+    },
+    {
+      "index": 2,
+      "item_name": "Inventory Sync",
+      "start_date": "2026-05-03",
+      "status": "In Progress",
+      "comments": "Waiting for supplier update"
+    },
+    {
+      "index": 3,
+      "item_name": "Refund Audit",
+      "start_date": "2026-05-06",
+      "status": "Closed",
+      "comments": "Completed and approved"
+    },
+    {
+      "index": 4,
+      "item_name": "Customer Support",
+      "start_date": "2026-05-08",
+      "status": "Open",
+      "comments": "Pending escalation"
+    },
+    {
+      "index": 5,
+      "item_name": "Sales Reconciliation",
+      "start_date": "2026-05-10",
+      "status": "In Progress",
+      "comments": "Cross-checking totals"
+    }
+  ]
+}
