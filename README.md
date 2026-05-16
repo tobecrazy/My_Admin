@@ -40,16 +40,18 @@ bin/setup
 bin/rails db:prepare
 ```
 
-3. Seed a development admin user:
+3. Seed initial data:
 
 ```bash
 bin/rails db:seed
 ```
 
-A default admin is created in development:
+A default admin user is created:
 
 - Email: `admin@example.com`
 - Password: `password`
+
+Report rows are also seeded from `db/mock/reports.json`.
 
 ## Run the App
 
@@ -118,6 +120,34 @@ This app includes Docker/Kamal configuration:
 - `config/deploy.yml`
 
 Review deployment settings before first release.
+
+## Docker
+
+Build and run with Docker Compose:
+
+```bash
+docker compose up -d --build
+```
+
+Or use the helper script:
+
+```bash
+./runMe.sh
+```
+
+`runMe.sh` builds/starts Docker Compose and opens `http://localhost:3300/admin` in your default browser.
+You can override the URL:
+
+```bash
+APP_URL=http://localhost:3300 ./runMe.sh
+```
+
+On container start, `bin/docker-entrypoint` runs:
+
+- `bin/rails db:prepare`
+- `bin/rails db:seed`
+
+So the default admin user and mock report data are loaded automatically in the container database.
 
 ## Contributing
 

@@ -11,3 +11,16 @@ admin = AdminUser.find_or_initialize_by(email: "admin@example.com")
 admin.password = "password"
 admin.password_confirmation = "password"
 admin.save!
+
+reports_path = Rails.root.join("db/mock/reports.json")
+if File.exist?(reports_path)
+  reports = JSON.parse(File.read(reports_path)).fetch("reports", [])
+  reports.each do |attrs|
+    report = Report.find_or_initialize_by(row_index: attrs.fetch("index"))
+    report.item_name = attrs["item_name"]
+    report.start_date = attrs["start_date"]
+    report.status = attrs["status"]
+    report.comments = attrs["comments"]
+    report.save!
+  end
+end
