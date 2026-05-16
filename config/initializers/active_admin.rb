@@ -261,6 +261,14 @@ ActiveAdmin.setup do |config|
   #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: "_blank" }
   #     end
   #   end
+  config.namespace :admin do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add label: "ActiveAdmin.info", url: "http://localhost:3000/admin",
+                                          html_options: { target: "_blank" }
+      admin.add_current_user_to_menu menu
+      admin.add_logout_button_to_menu menu
+    end
+  end
 
   # == Download Links
   #

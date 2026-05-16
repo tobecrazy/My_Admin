@@ -1,0 +1,54 @@
+{
+  "online_store_visitors": {
+    "title": "Online Store Visitors",
+    "report_label": "View Report",
+    "summary": {
+      "value": "820",
+      "label": "Visitors Over Time",
+      "trend": "+12.5%",
+      "trend_note": "Since last week"
+    },
+    "series": {
+      "labels": ["18th", "20th", "22nd", "24th", "26th", "28th", "30th"],
+      "this_week": [100, 120, 170, 165, 178, 176, 160],
+      "last_week": [60, 80, 70, 68, 80, 78, 100]
+    }
+  },
+  "sales": {
+    "title": "Sales",
+    "report_label": "View Report",
+    "summary": {
+      "value": "$18,230.00",
+      "label": "Sales Over Time",
+      "trend": "+33.1%",
+      "trend_note": "Since last month"
+    },
+    "series": {
+      "labels": ["JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      "this_year": [1000, 2000, 3000, 2500, 2700, 2500, 3000],
+      "last_year": [700, 1700, 2700, 2000, 1800, 1500, 2000]
+    }
+  },
+  "products": [
+    { "name": "Some Product", "price": "$13 USD", "trend": "+12%", "sales": "12,000 Sold", "trend_type": "up" },
+    { "name": "Another Product", "price": "$29 USD", "trend": "-0.5%", "sales": "123,234 Sold", "trend_type": "down" },
+    { "name": "Amazing Product", "price": "$1,230 USD", "trend": "-3%", "sales": "198 Sold", "trend_type": "down" },
+    { "name": "Perfect Item", "price": "$199 USD", "trend": "+63%", "sales": "87 Sold", "trend_type": "up", "badge": "NEW" }
+  ],
+  "overview": [
+    { "label": "CONVERSION RATE", "value": "12%", "trend_type": "up" },
+    { "label": "SALES RATE", "value": "0.8%", "trend_type": "up" },
+    { "label": "REGISTRATION RATE", "value": "1%", "trend_type": "down" }
+  ],
+  "pie_chart": {
+    "title": "Pie Chart",
+    "segments": [
+      { "label": "Chrome", "value": 27, "color": "#de6e56" },
+      { "label": "IE", "value": 20, "color": "#4aa05f" },
+      { "label": "FireFox", "value": 16, "color": "#e0a03b" },
+      { "label": "Safari", "value": 22, "color": "#54abd1" },
+      { "label": "Opera", "value": 12, "color": "#5489b3" },
+      { "label": "Navigator", "value": 3, "color": "#bfc3cc" }
+    ]
+  }
+}
